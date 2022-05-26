@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3D</title>
+        <style>
+        *{
+            /* perspective: 1000px;*/
+            perspective: 500px;
+        }
+        img{
+            width: 300px;
+            display: block;
+            margin: auto;
+            margin-top: 200px;
+
+            transition: all 2s;
+        }
+        img:hover{
+            /* transform: translateZ(1000px); */
+            /* transform: translateZ(300px); zoom-in*/
+            /* transform:translateZ(-300px); zoom-out*/
+
+            transform:translateZ(300px);
+        }
+        </style>
+    </head>
+    <body>
+        <img src="./img/dog.jpg" alt="dog"/>
+
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ani Effect</title>
+        <style type="text/css">
+            /*pre element animation do not wait next element animation delay */
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #222;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            h1 span{
+                color: #777;
+                font-size: 80px;
+                font-weight: lighter;
+                letter-spacing: 15px;
+                animation: myani 1.4s linear infinite;
+                
+            }
+            h1 span:nth-child(1){
+                animation-delay: 0s;
+            }
+            h1 span:nth-child(2){
+                animation-delay: 0.2s;
+            }
+            h1 span:nth-child(3){
+                animation-delay: 0.4s;
+            }
+            h1 span:nth-child(4){
+                animation-delay: 0.6s;
+            }
+            h1 span:nth-child(5){
+                animation-delay: 0.8s;
+            }
+            h1 span:nth-child(6){
+                animation-delay: 1s;
+            }
+            h1 span:nth-child(7){
+                animation-delay: 1.2s;
+            }
+            h1 span:nth-child(8){
+                animation-delay: 1.4s;
+            }
+
+
+            @keyframes myani {
+                /* 0%{
+                    color: #777;
+                    text-shadow: none;
+                } */
+                90%{
+                    color: #777;
+                    text-shadow: none;
+                }
+                100%{
+                    color: yellow;
+                    text-shadow: 0 0 20px red;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <h1><span>D</span><span>a</span><span>t</span><span>a</span><span>L</span><span>a</span><span>n</span><span>d</span></h1>
+        
+    </body>
+</html>

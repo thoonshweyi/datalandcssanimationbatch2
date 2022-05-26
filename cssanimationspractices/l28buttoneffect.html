@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <html>
+        <title>Button Effect</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+                overflow: hidden;
+            }
+            a{
+                width: 160px;
+                height: 60px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #000;
+                border: 2px solid #000;
+
+                text-align: center;
+                line-height: 60px;
+
+                position: relative;
+            }
+            a::before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                opacity: 0;
+
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+
+                transition: all 0.25s;
+            }
+            a:hover::before{
+                transform: rotate(15deg);
+                opacity: 1;
+            }
+            span{
+                color: transparent;
+                position: relative;
+            }
+            span::before{
+                content: 'H';
+                color: #000;
+
+                position: absolute;
+
+                transition: all 0.5s;
+            }
+            a:hover span::before{
+                font-size: 65px;
+                color: #fff;
+                transform: translate(-65%,-10%) rotate(1turn);
+            }
+            a:hover{
+                color: #fff;
+            }
+        </style>
+    </html>
+    <body>
+        
+        <a href="#"><span>H</span>over Me</a>
+
+    </body>
+</html>

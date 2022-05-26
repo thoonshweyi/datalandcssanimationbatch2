@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Effect</title>
+    </head>
+    <style>
+        body{
+            font-family: sans-serif;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0;
+            overflow: hidden;
+        }
+        .container{
+            width: 450px;
+            height: 300px;
+            position: relative;
+
+            overflow: hidden;
+        }
+        .container::before{
+            content: '';
+            width: 120%;
+            height: 200%;
+            background-color: #242424;
+
+            opacity: 0.8;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            transform: translate(500px,300px) rotate(45deg);
+            transition: all 0.25s;
+        }
+        .container:hover::before{
+            transform: translate(-50px,-150px) rotate(45deg);
+        }
+        .container img{
+            width: 100%;
+        }
+        .container .caption{
+            width: 100%;
+            height: 100%;
+            /* background-color: red; */
+            
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: flex;
+            justify-content: space-around;
+            /* align-items: center; */
+            flex-direction: column;
+
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .caption h2{
+            font-size: 17px;
+            background-color: rgba(0,0,0,0.6);
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            
+            transform: translate(200px,-200px);
+
+            transition: all 0.25s;
+            transition-delay: 0.3s;
+        }
+        .container:hover h2{
+            transform: translate(0,0);
+        }
+        .caption p{
+            width: 80%;
+            text-align: center;
+            align-self: center;
+            /* margin: auto; */
+
+            transform: translate(-200px,200px);
+
+            transition: all 0.25s;
+           
+        }
+        .container:hover p{
+            transform: translate(0,0);
+            transition-delay: 0.4s;
+        }
+        .caption a{
+            text-decoration: none;
+            background-color: #000;
+            color: #fff;
+            width: 100px;
+            padding: 15px;
+            margin-bottom: 20px;
+            align-self: center;
+            transform: translateY(100px);
+            transition: all 0.25s;
+        }
+        .container:hover a{
+            transform: translateY(0);
+            transition-delay: 0.5s;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <img src="img/webdep.jpg" alt="webdep"/>
+            <div class="caption">
+                <h2>How Sweet !</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </body>
+</html>

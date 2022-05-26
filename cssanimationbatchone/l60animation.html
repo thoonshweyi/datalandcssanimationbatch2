@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Hover Effect</title>
+<!--    fontawsome css1-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style type="text/css">
+    body{
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+
+    ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    ul li{
+        list-style-type: none;
+        width: 120px;
+        height: 120px;
+        border: 2px solid #0a3d62;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0 20px;
+
+        position: relative;
+    }
+
+    ul li i{
+        font-size: 48px;
+        color: #0a3d62;
+    }
+
+    ul li::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #0a3d62;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: -1;
+        opacity: 0;
+
+        transition: all 0.5s;
+    }
+
+    ul li:hover::before{
+        opacity: 1;
+        transform: scale(0.8);
+    }
+
+    ul li:hover i{
+        color: #fff;
+    }
+
+    ul li::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px dashed #0a3d72;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        box-sizing: border-box;
+
+        opacity: 0;
+        animation-name: myani;
+        animation-duration: 0.7s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    ul li:hover::after{
+        opacity: 1;
+    }
+
+    @keyframes myani {
+        from{
+            transform: scale(0.92) rotate(0deg);
+        }
+        to{
+            transform: scale(0.92) rotate(1turn);
+        }
+    }
+</style>
+<body>
+    <ul>
+        <li><i class="fas fa-heart"></i></li>
+        <li><i class="fas fa-glass-martini"></i></li>
+        <li><i class="fas fa-globe"></i></li>
+        <li><i class="fas fa-gift"></i></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice 11 Text</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: peachpuff;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+                overflow: hidden;
+            }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+
+                display: flex;
+            }
+            li{
+                font-size: 100px;
+                color: white;
+                letter-spacing: 10px;
+
+                opacity: 0;
+
+                animation: text-throwbt 1.2s 1 linear;
+                animation-fill-mode: forwards;
+            }
+            li:nth-child(1){
+                animation-delay: 0;
+            }
+            li:nth-child(2){
+                animation-delay: 0.1s;
+            }
+            li:nth-child(3){
+                animation-delay: 0.2s;
+            }
+            li:nth-child(4){
+                animation-delay: 0.3s;
+            }
+            li:nth-child(5){
+                animation-delay: 0.4s;
+            }
+            li:nth-child(6){
+                animation-delay: 0.5s;
+            }
+            li:nth-child(7){
+                animation-delay: 0.6s;
+            }
+            li:nth-child(8){
+                animation-delay: 0.7s;
+            }
+            @keyframes text-throwbt {
+                0%{
+                    transform: translateY(30px);
+                }
+                50%{
+                    opacity: 1;
+                    transform: translateY(-30px);
+                }
+                80%{
+                    transform: translateY(0);
+                }
+                90%{
+                    transform: translateY(-5px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+        
+        <ul>
+            <li>D</li>
+            <li>a</li>
+            <li>t</li>
+            <li>a</li>
+            <li>L</li>
+            <li>a</li>
+            <li>n</li>
+            <li>d</li>
+        </ul>
+
+    </body>
+</html>

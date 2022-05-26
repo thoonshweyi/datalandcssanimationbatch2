@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ani Effect</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                background: #1c30a3;
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+             h1{
+                 font-size: 200px;
+                 text-align: center;
+                 text-transform: uppercase;
+                 background-image: url('./img/banner.png');
+
+                 background-clip: text;
+                 -webkit-background-clip: text;
+                 -moz-background-clip: text;
+
+                 color: transparent;
+
+                 animation: myani 20s infinite linear;
+             }
+
+             @keyframes myani {
+                 from{  
+                                        /* left top */
+                                        /* x,y */
+                    background-position: 0 0;
+                 }
+                 to{
+                    background-position: 100% 0;
+                 }
+             }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Css animation</h1>
+
+    </body>
+</html>

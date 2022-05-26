@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ani Effect</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: skyblue;
+            
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+                color: white;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 100px;
+                letter-spacing: 10px;
+                text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+
+                animation-name: myani;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+            }
+            @keyframes myani {
+                from{
+                    transform: rotate(10deg);
+                }
+                to{
+                    transform: rotate(-10deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>
+            Css<br/>
+            animation<br/>
+            effect
+        </h1>
+
+
+    </body>
+</html>

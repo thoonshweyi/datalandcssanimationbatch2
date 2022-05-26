@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice 6 Loader</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+                overflow: hidden;
+            }
+            .bricks{
+                width: 80px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .bricks div{
+                width: 30px;
+                height: 30px;
+                /* background-color: tomato; */
+                margin: 5px;
+            }
+            .bricks div:nth-child(1){
+                background-color: tomato;
+                animation: brickone 2s infinite linear;    
+                
+                animation-delay: 0.5s;
+            }
+            .bricks div:nth-child(2){
+                background-color: yellowgreen;
+                animation: bricktwo 2s infinite linear;
+
+
+            }
+            .bricks div:nth-child(3){
+                background-color: orange;
+
+                animation: brickthree 2s infinite linear;
+                animation-delay: 0.5s;
+            }
+
+            @keyframes bricktwo {
+                0%{
+
+                }
+                25%{
+                    /* bottom */
+                    transform: translate(0,40px);
+                }
+                50%{
+                    /* left */
+                    transform: translate(-40px,40px);
+                }
+                75%{
+                    /* top */
+                    transform: translate(-40px,0%);
+                }
+                100%{
+                    /* right */
+                    transform: translate(0,0);
+                }
+            }
+            @keyframes brickone {
+                0%{
+                    
+                }
+                25%{
+                    transform: translate(40px,0);
+                }
+                50%{
+                    transform: translate(40px,40px);
+                }
+                75%{
+                    transform: translate(0,40px);
+                }
+                100%{
+                    transform: translate(0,0);
+                }
+            }
+
+            @keyframes brickthree {
+                0%{
+
+                }
+                25%{
+                    transform: translate(0,-40px);
+                }
+                50%{
+                    transform: translate(40px,-40px);
+                }
+                75%{
+                    transform: translate(40px,0);
+                }
+                100%{
+                    transform: translate(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bricks">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+    </body>
+</html>

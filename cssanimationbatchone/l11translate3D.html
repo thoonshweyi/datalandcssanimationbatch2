@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Translate In 3D</title>
+        <style type="text/css">
+        *{
+            perspective: 1000px;
+        }
+            img{
+                display: block;
+                width: 300px;
+                height: 200px;
+                margin: auto;
+                margin-top: 200px;
+                transition: transform 2s;
+            }
+            img:hover{
+                transform: rotateX(120deg);
+            }
+        </style>
+    </head>
+    <body>
+        <img src="img/dog.jpg" alt="dog"/>
+    </body>
+</html>

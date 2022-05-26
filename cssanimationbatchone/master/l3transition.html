@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transition Options</title>
+</head>
+<style type="text/css">
+	.container{
+		width: 960px;
+	}
+
+	.container .move{
+		width: 150px;
+		height: 50px;
+		background-color: red;
+		color:#fff;
+		font-size: 20px;
+		margin: 2rem;
+				/*top&bottom left&right*/
+		padding: 10px 15px;
+		text-align: center;
+		line-height:50px;
+
+		border-radus: 0.5rem;
+
+
+		transition-property: transform;
+		transition-duration: 3s;
+
+	}
+
+
+	.container .move:hover{
+		transform:translate(900px,0);
+	}
+
+	#ease{
+		transition-timing-function: ease;
+	}
+
+	#ease-in{
+		transition-timing-function: ease-in;
+	}
+
+	#ease-out{
+		transition-timing-function: ease-out;
+	}
+
+	#ease-in-out{
+		transition-timing-function: ease-in-out;
+	}
+
+	#linear{
+		transition-timing-function: linear;
+	}
+
+
+</style>
+<body>
+
+	<div class="container">
+		<div id="ease" class="move">Ease (Default)</div>
+		<div id="ease-in" class="move">Ease-In</div>
+		<div id="ease-out" class="move">Ease-Out</div>
+		<div id="ease-in-out" class="move">Ease-In-Out</div>
+		<div id="linear" class="move">Linear</div>
+	</div>
+	
+</body>
+</html>
+
+
+
+<!-- 1rem = 16px;  -->
+
+<!-- ease: slow gofaster finishes slow
+eas-in: slow gofaster finishes fast
+eas-out: gofaster finishes slow
+ease-in-out : slow faster finishes slow
+linear:same rate -->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice 4 Loader</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #fcb1b1;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+                overflow: hidden;
+            }
+            .trianglebox{
+                width: 0;
+                height: 0;
+                border: 50px solid #f0f696;
+                border-color: #f0f696 transparent #f0f696 transparent;
+                border-radius: 50%;
+
+                animation: loaders-traingle 1.2s infinite linear;
+            }
+
+            @keyframes  loaders-traingle {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(1turn);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+
+        <div class="trianglebox"></div>
+    </body>
+</html>

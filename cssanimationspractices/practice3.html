@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice 3 Loader</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background: linear-gradient(to right, rgb(0, 176, 155), rgb(150, 201, 61));
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+                overflow: hidden;
+            }
+            .loader{
+                width: 90px;
+                height: 90px;
+                border: 10px solid #e1e6e2;
+                border-color: #1e6262 #e1e6e2 #1e6262 #e1e6e2;
+                border-radius: 50%;
+
+                animation: lds-ring 1.2s infinite linear;
+            }
+
+
+            @keyframes lds-ring {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="loader"></div>
+
+    </body>
+</html>

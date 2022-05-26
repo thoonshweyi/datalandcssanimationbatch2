@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ani Effect</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: navy;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+                color: white;
+                font-size: 40px;
+                letter-spacing: 10px;
+                text-transform: uppercase;
+
+                position: relative;
+            }
+            h1::before{
+                content: 'Loading...';
+                width: 50%;
+                height: 100%;
+                color: orange;
+                border-right: 4px solid orange;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                overflow: hidden;
+
+                animation: myani 5s infinite linear;
+            }
+            @keyframes myani {
+                0%{
+                    width: 0%;
+                }
+                50%{
+                    width: 100%;
+                }
+                100%{
+                    width: 0%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+
+        <h1>Loading...</h1>
+
+    </body>
+</html>

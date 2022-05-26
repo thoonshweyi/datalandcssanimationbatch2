@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Seven Loader</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #222;
+
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+                overflow: hidden;
+            }
+            .disk{
+                width: 100px;
+                height: 100px;
+                background-color: tomato;
+                border-radius: 50%;
+
+                position: relative;
+            }
+            .stick{
+                width: 5px;
+                height: 100%;
+                /* background-color: red; */
+            
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+
+                /* visibility: hidden; */
+            
+                animation: loader-disk 1.5s infinite linear;
+            }
+            .stick .ball{
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+                border-radius: 50%;
+
+
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%);
+
+                /* opacity: 1; */
+            }
+            @keyframes loader-disk {
+                0%{
+
+                }
+                100%{
+                    transform: translate(-50%,-50%) rotate(1turn);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="disk">
+            <div class="stick"><div class="ball"></div></div>
+        </div>
+
+    </body>
+</html>

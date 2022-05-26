@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice One</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+                overflow: hidden;
+            }
+            .loaderbars{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .bar{
+                width: 15px;
+                height: 50px;
+                background-color: #7fd496;
+                margin: 0 10px;
+
+                animation: loaderbarani 0.4s infinite linear;
+            }
+            .bar:nth-child(2){
+                animation-delay: 0.2s;
+            }
+            @keyframes loaderbarani {
+                0%{
+                    background-color: #7fd496;
+                    height: 50px;
+                }
+                50%{
+                    background-color: #ed4278;
+                    height: 90px;
+                }
+                100%{
+                    background-color: #7649e6;
+                    height: 50px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="loaderbars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+
+    </body>
+</html>

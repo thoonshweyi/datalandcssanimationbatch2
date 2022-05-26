@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background Image Effect</title>
+</head>
+<style type="text/css">
+    .banner{
+      height: 100vh;
+      background-image: url("img/banner.png");
+
+      background-position: 0 0;
+
+      animation-name: myani;
+      animation-duration: 15s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+
+    }
+    @keyframes myani {
+      from{
+                            /*left top*/
+        background-position: 0 0;
+      }
+      to{
+        background-position: 0 800px;
+      }
+    }
+</style>
+<body>
+    <div class="banner">
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Ani One</title>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #07074a;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+                overflow: hidden;
+            }
+            .bar{
+                border-bottom: 10px solid red;
+                display: flex;
+            }
+            .balls{
+                width: 50px;
+                height: 50px;
+                background-color: #f4f4f4;
+                border-radius: 50%;
+                color: #07074a;
+                font-size: 30px;
+                
+                margin: 0 10px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .balls:nth-child(1){
+                transform: translate(-70px,0);
+            }
+            .balls:nth-child(2){
+                transform: translate(-300%,-100%);
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bar">
+            <div class="balls">W</div>
+            <div class="balls">D</div>
+            <div class="balls">F</div>
+            <div class="balls">4</div>
+        </div>
+
+    </body>
+</html>

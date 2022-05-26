@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ani Effect</title>
+        <!-- fontawesome -->
+        <link href="../../dltwdfbatch4/libs/fontawesomepro/css/all.min.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">
+            body{
+                font-family: sans-serif;
+                height: 100vh;
+                background-color: #f4f4f4;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                display: flex;
+            }
+            a{
+                text-decoration: none;
+                /* we should use width & height instead of padding in this project */
+                width: 90px;
+                height: 90px;
+                display: inline-block;
+                
+                
+                box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+                border-radius: 15px;
+                color: green;
+                font-size: 26px;
+                text-align: center;
+                line-height: 90px;
+                /* padding: 25px 30px; */
+                margin: 10px;
+
+                position: relative;
+                
+                overflow: hidden;
+            }
+            a::before{
+                content: '';
+                width: 200%;
+                height: 130%;
+                background-color: green;
+
+                position: absolute;
+                top: 100%;
+                left: -200%;
+                z-index: -1;
+                transform: rotate(45deg);
+
+                transition: all 0.5s;
+            }
+
+
+            a:hover{
+                color: #fff;
+            }
+            a:hover i{
+                transform: scale(1.2);
+            }
+            a:hover::before{
+
+               animation: myani 1s 1 forwards;
+            }
+
+            @keyframes myani{
+                0%{
+                    
+                }
+                50%{
+                    top: -20%;
+                    left: -30%;
+                }
+                100%{
+                    /* horizontal */
+                    top: -20%;
+                    /* vertical */
+                    left: -55%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-google"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        
+    </body>
+</html>
